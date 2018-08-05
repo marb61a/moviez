@@ -59,6 +59,57 @@ class App extends Component {
                 "revenue-list"
               ]
             }}
+            showFilter={true}
+            filterLabel="Genre"
+            URLParams={false}
+            innerClass={{
+              label: "list-item",
+              input: "list-input"
+            }}
+          />
+          <SingleRange 
+            componentId="revenue-list"
+            dataField="ran_revenue"
+            className="revenue-filter"
+            data={[
+              { start: 0, end: 1000, label: "< 1M" },
+              { start: 1000, end: 10000, label: "1M-10M" },
+              { start: 10000, end: 500000, label: "10M-500M" },
+              { start: 500000, end: 1000000, label: "500M-1B" },
+              { start: 1000000, end: 10000000, label: "> 1B" }
+            ]}
+            showRadion={true}
+            showFilter={true}
+            filterLabel="Revenue"
+            URLParams={false}
+            innerClass={{
+              label: "revenue-label",
+              radio: "revenue-radio"
+            }}
+          />
+          <RangeSlider 
+            componentId="RangeSlider"
+            dataField="vote_average"
+            className="review-filter"
+            title="ratings"
+            range={{
+              start: 0,
+              end: 10
+            }}
+            rangeLabels={{
+              start: 0,
+              end: 10
+            }}
+            react={{
+              and: [
+                "mainSearch",
+                "results",
+                "language-list",
+                "date-Filter",
+                "genres-list",
+                "revenue-list"
+              ]
+            }}
           />
         </ReactiveBase>
     );
