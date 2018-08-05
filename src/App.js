@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
-import { ReactiveBase } from '@appbaseio/reactivesearch';
+import { 
+  ReactiveBase, 
+  DataSearch,
+  MultiDataList,
+  RangeSlider,
+  DateRange,
+  MultiList,
+  SingleRange
+} from '@appbaseio/reactivesearch';
 
 class App extends Component {
   render() {
@@ -20,9 +28,38 @@ class App extends Component {
               alertColor: "#d9534f",
               borderColor: "#666"
             }
-          }}
-         >
-          Hello from ReactiveSearch!
+            }}
+          >
+          <DataSearch 
+            componentId="mainSearch"            
+            dataField={["original_title.search"]}                      
+            className="search-bar"            
+            queryFormat="and"            
+            placeholder="Search for movies..."
+          />
+          <MultiList 
+            componentId="genres-list"
+            dataField="genres_data.raw"
+            className="genres-filter"
+            size={20}
+            sortBy="asc"
+            queryFormat="or"
+            selectAllLabel="All Genres"
+            showCheckbox={true}
+            showCount={true}
+            showSearch={true}
+            placeholder="Search for a Genre"
+            react={{
+              and: [
+                "mainSearch",
+                "results",
+                "date-filter",
+                "RangeSlider",
+                "language-list",
+                "revenue-list"
+              ]
+            }}
+          />
         </ReactiveBase>
     );
   }
