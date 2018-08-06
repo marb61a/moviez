@@ -192,8 +192,52 @@ class App extends Component {
                   value: "Chinese"
                 },
                 {
+                  label: "Turkish",
+                  value: "Turkish"
+                },
+                {
+                  label: "Swedish",
+                  value: "Swedish"
+                },
+                {
+                  label: "Russian",
+                  value: "Russian"
+                },
+                {
+                  label: "Portuguese",
+                  value: "Portuguese"
+                },
+                {
+                  label: "Korean",
+                  value: "Korean"
+                },
+                {
+                  label: "Japanese",
+                  value: "Japanese"
+                },
+                {
+                  label: "Italian",
+                  value: "Italian"
+                },
+                {
                   label: "Hindi",
                   value: "Hindi"
+                },
+                {
+                  label: "French",
+                  value: "French"
+                },
+                {
+                  label: "Finnish",
+                  value: "Finnish"
+                },
+                {
+                  label: "Spanish",
+                  value: "Spanish"
+                },
+                {
+                  label: "Deutsch",
+                  value: "Deutsch"
                 }
               ]}
               showFilter={true}
@@ -204,11 +248,19 @@ class App extends Component {
                 input: "list-input"
               }}
             />
-          <DateRange
-            componentId="date-filter"
-            dataField="release_date"
-            className="datePicker"
-          />
+            <hr className="blue" />
+
+            <div className="filter-heading center">
+              <b>
+                {" "}
+                <i className="fa fa-calendar" /> Release Date{" "}
+              </b>
+            </div>
+            <DateRange
+              componentId="date-filter"
+              dataField="release_date"
+              className="datePicker"
+            />
           </div>
         </ReactiveBase>
       </div>

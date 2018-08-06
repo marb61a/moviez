@@ -90,3 +90,39 @@ logo-container {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.revenue-label {
+  font-size: 13px;
+  color: #cdcdcd;
+  margin-left: 2px;
+}
+
+.revenue-filtet {
+  font-size: 13px;
+}
+
+.revenue-radio {
+  color: #86ddf8;
+}
+
+.datePicker {
+  color: #000;
+}
+
+.list-item {
+  font-size: 13px;
+  color: #cdcdcd;
+  margin-left: 2px;
+}
+
+.list-item:hover {
+  background-color: #4d4d4d;
+  color: #fff;
+}
+
+.blue {
+  background-color: #86ddf8;
+  height: 1px;
+}
+
+
