@@ -192,6 +192,56 @@ logo-container {
   width: 80%;
 }
 
+.revenue-time-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.language-data {
+  text-align: center;
+}
+
+.result-container-optional {
+  width: 85%;
+}
+
+.toggle-button {
+  display: none;
+  position: fixed;
+  font-size: 15px;
+  height: 35px;
+  z-index: 1;
+  bottom: 5rem;
+  opacity: 1;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.extra-description {
+  width: 100%;
+}
+
+.result-stats {
+  color: #86ddf8;
+  font-size: 14px;
+  margin-left: 3px;
+  margin-top: 5px;
+}
+
+.result-title {
+  display: none;
+}
+
+.result-card-header {
+  flex-direction: column;
+}
+
+.result-card-header > div {
+  justify-content: center;
+  margin-top: 5px;
+}
+
 
 /* SCROLLBAR STYLES */
 :-webkit-scrollbar {
