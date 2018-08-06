@@ -6,11 +6,29 @@ import {
   RangeSlider,
   DateRange,
   MultiList,
-  SingleRange
+  SingleRange,
+  SelectedFilters,
+  ResultCard
 } from '@appbaseio/reactivesearch';
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    
+    this.state = {
+      isClicked: false,
+      message: "Show Filters"
+    };
+  }
+  
+  handleClick(){
+    this.setState({
+      isClicked: !this.state.isClicked,
+      message: this.state.isClicked ? "Show Filters" : "Show Movies" 
+    });
+  }
+  
   render() {
     return (
       <div className="main-container">
@@ -261,6 +279,10 @@ class App extends Component {
               dataField="release_date"
               className="datePicker"
             />
+            
+            <button className="toggle-button" onClick={this.handleClick.bind(this)}>
+              {this.state.message}
+            </button>
           </div>
         </ReactiveBase>
       </div>
