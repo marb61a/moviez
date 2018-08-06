@@ -166,6 +166,31 @@ logo-container {
   color: #86ddf8;
 }
 
+.rating-time-score-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.revenue-lang-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.revenue-data {
+  font-size: 13px;
+  color: #86ddf8;
+  text-align: center;
+}
+
+.result-container {
+  width: 80%;
+}
 
 
 /* SCROLLBAR STYLES */
