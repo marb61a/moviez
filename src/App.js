@@ -76,13 +76,12 @@ class App extends Component {
           
           <div className="sub-container">
             <div className={this.state.isClicked ? "left-bar-optional" : "left-bar"}>
-              <div className="left-bar">
-                <div className="filter-heading center">
-                  <b>
-                    {" "}
-                    <i className="fa fa-pied-piper-alt" /> Genres{" "}
-                  </b>
-                </div>
+              <div className="filter-heading center">
+                <b>
+                  {" "}
+                  <i className="fa fa-pied-piper-alt" /> Genres{" "}
+                </b>
+              </div>
                 <MultiList 
                   componentId="genres-list"
                   dataField="genres_data.raw"
@@ -304,13 +303,60 @@ class App extends Component {
                       "revenue-list"
                     ]
                   }}
+                  pagination={true}
+                  className="Result_card"
+                  paginationAt="bottom"
+                  pages={5}
+                  size={12}
+                  Loader="Loading..."
+                  noResults="No results were found..."
+                  sortOptions={[
+                    {
+                      dataField: "revenue",
+                      sortBy: "desc",
+                      label: "Sort by Revenue(High to Low) \u00A0"
+                    },
+                    {
+                      dataField: "popularity",
+                      sortBy: "desc",
+                      label: "Sort by Popularity(High to Low)\u00A0 \u00A0"
+                    },
+                    {
+                      dataField: "vote_average",
+                      sortBy: "desc",
+                      label: "Sort by Ratings(High to Low) \u00A0"
+                    },
+                    {
+                      dataField: "original_title.raw",
+                      sortBy: "asc",
+                      label: "Sort by Title(A-Z) \u00A0"
+                    }
+                  ]}
+                  innerClass={{
+                    title: "result-title",
+                    listItem: "result-item",
+                    list: "list-container",
+                    sortOptions: "sort-options",
+                    resultStats: "result-stats",
+                    resultsInfo: "result-list-info",
+                    poweredBy: "powered-by"
+                  }}
+                  onData={function(res){
+                    return {
+                      description: (
+                        <div className="main-description">
+                        
+                        </div>
+                      )
+                    }
+                  }}
                 />
               </div>
               
               <button className="toggle-button" onClick={this.handleClick.bind(this)}>
                 {this.state.message}
               </button>
-            
+            </div>
           </div>
         </ReactiveBase>
       </div>

@@ -126,6 +126,26 @@ logo-container {
 }
 
 
+/* RESULT CONTAINER STYLES */
+.result-item {
+  min-height: 315px;
+  background-color: #212121 !important;
+  margin-right: 17px !important;
+  margin-bottom: 17px !important;
+  padding: 0px !important;
+}
+
+.result-image {
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  overflow: hidden;
+  height: 325px !important;
+  width: 250px !important;
+  margin-bottom: 7px;
+}
+
+
 /* SCROLLBAR STYLES */
 :-webkit-scrollbar {
   width: 13px;
