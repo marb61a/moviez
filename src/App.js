@@ -8,6 +8,7 @@ import {
   MultiList,
   SingleRange
 } from '@appbaseio/reactivesearch';
+import './App.css';
 
 class App extends Component {
   render() {
@@ -97,8 +98,8 @@ class App extends Component {
               end: 10
             }}
             rangeLabels={{
-              start: 0,
-              end: 10
+              start: "0",
+              end: "10"
             }}
             react={{
               and: [
@@ -155,6 +156,11 @@ class App extends Component {
               label: "list-item",
               input: "list-input"
             }}
+          />
+          <DateRange
+            componentId="date-filter"
+            dataField="release_date"
+            className="datePicker"
           />
         </ReactiveBase>
     );
