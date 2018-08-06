@@ -13,7 +13,8 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <ReactiveBase
+      <div className="main-container">
+        <ReactiveBase
           app="moviez"
           credentials="qOrtSSiNb:99c511f3-4e81-4047-a6a7-3ed5c4cb0912"
           theme={{
@@ -31,13 +32,28 @@ class App extends Component {
             }
             }}
           >
-          <DataSearch 
-            componentId="mainSearch"            
-            dataField={["original_title.search"]}                      
-            className="search-bar"            
-            queryFormat="and"            
-            placeholder="Search for movies..."
-          />
+          <div className="navbar">
+            <div className="logo-container">
+              <img
+                className="app-logo"
+                src="Images/logo.jpg"
+                alt="MovieSearch"
+              />
+            </div>
+            <div className="search-container">
+              <DataSearch
+                componentId="mainSearch"
+                dataField={["original_title"]}
+                categoryField="title"
+                className="search-bar"
+                queryFormat="and"
+                placeholder="Search for movies..."
+                iconPosition="left"
+                autosuggest={false}
+                filterLabel="search"
+              />
+            </div>
+          </div>
           <MultiList 
             componentId="genres-list"
             dataField="genres_data.raw"
@@ -163,6 +179,7 @@ class App extends Component {
             className="datePicker"
           />
         </ReactiveBase>
+      </div>
     );
   }
 }

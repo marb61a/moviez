@@ -29,3 +29,30 @@ hr {
 
 
 /* HEADER STYLES */
+.navbar {
+  background-color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+logo-container {
+  width: 50%;
+}
+
+.app-logo {
+  margin-left: 0px !important;
+  margin-top: 3px;
+}
+
+.search-container {
+  width: 50%;
+}
+
+.search-bar {
+  border: 2px solid #86ddf8;
+  border-radius: 3px;
+}
