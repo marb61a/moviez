@@ -145,6 +145,28 @@ logo-container {
   margin-bottom: 7px;
 }
 
+.voters {
+  font-size: 11px;
+  color: #86ddf8;
+}
+
+.details {
+  font-size: 11px;
+  color: #cdcdcd;
+  text-align: center;
+}
+
+.sub-title {
+  color: #86ddf8;
+  font-size: 13px;
+  text-align: center;
+}
+
+.time {
+  color: #86ddf8;
+}
+
+
 
 /* SCROLLBAR STYLES */
 :-webkit-scrollbar {

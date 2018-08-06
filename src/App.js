@@ -82,207 +82,208 @@ class App extends Component {
                   <i className="fa fa-pied-piper-alt" /> Genres{" "}
                 </b>
               </div>
-                <MultiList 
-                  componentId="genres-list"
-                  dataField="genres_data.raw"
-                  className="genres-filter"
-                  size={20}
-                  sortBy="asc"
-                  queryFormat="or"
-                  selectAllLabel="All Genres"
-                  showCheckbox={true}
-                  showCount={true}
-                  showSearch={true}
-                  placeholder="Search for a Genre"
-                  react={{
-                    and: [
-                      "mainSearch",
-                      "results",
-                      "date-filter",
-                      "RangeSlider",
-                      "language-list",
-                      "revenue-list"
-                    ]
-                  }}
-                  showFilter={true}
-                  filterLabel="Genre"
-                  URLParams={false}
-                  innerClass={{
-                    label: "list-item",
-                    input: "list-input"
-                  }}
-                />
-              <hr className="blue" />
-              </div>
-              
-              <div className="filter-heading center">
-                <b>
-                  {" "}
-                  <i className="fa fa-pied-piper-alt" /> Revenue{" "}
-                </b>
-              </div>
-              <SingleRange 
-                componentId="revenue-list"
-                dataField="ran_revenue"
-                className="revenue-filter"
-                data={[
-                  { start: 0, end: 1000, label: "< 1M" },
-                  { start: 1000, end: 10000, label: "1M-10M" },
-                  { start: 10000, end: 500000, label: "10M-500M" },
-                  { start: 500000, end: 1000000, label: "500M-1B" },
-                  { start: 1000000, end: 10000000, label: "> 1B" }
-                ]}
-                showRadion={true}
-                showFilter={true}
-                filterLabel="Revenue"
-                URLParams={false}
-                innerClass={{
-                  label: "revenue-label",
-                  radio: "revenue-radio"
-                }}
-              />
-              <hr className="blue" />
-              
-              <div className="filter-heading center">
-                <b>
-                  <i className="fa fa-star" /> Ratings
-                </b>
-              </div>
-              <RangeSlider 
-                componentId="RangeSlider"
-                dataField="vote_average"
-                className="review-filter"
-                title="ratings"
-                range={{
-                  start: 0,
-                  end: 10
-                }}
-                rangeLabels={{
-                  start: "0",
-                  end: "10"
-                }}
-                react={{
-                  and: [
-                    "mainSearch",
-                    "results",
-                    "language-list",
-                    "date-Filter",
-                    "genres-list",
-                    "revenue-list"
-                  ]
-                }}
-              />
-              <hr className="blue"/>
-              
-              <div className="filter-heading center">
-                <b>
-                  {" "}
-                  <i className="fa fa-language" /> Languages{" "}
-                </b>
-              </div>
-              <MultiDataList 
-                componentId="language-list"
-                dataField="original_language.raw"
-                className="language-filter"
-                title="language"
-                size={100}
+              <MultiList 
+                componentId="genres-list"
+                dataField="genres_data.raw"
+                className="genres-filter"
+                size={20}
                 sortBy="asc"
                 queryFormat="or"
-                selectAllLabel="All Languages"
+                selectAllLabel="All Genres"
                 showCheckbox={true}
+                showCount={true}
                 showSearch={true}
-                placeholder="Search for a language"
+                placeholder="Search for a Genre"
                 react={{
                   and: [
                     "mainSearch",
                     "results",
                     "date-filter",
                     "RangeSlider",
-                    "genres-list",
+                    "language-list",
                     "revenue-list"
                   ]
                 }}
-                data={[
-                  {
-                    label: "English",
-                    value: "English"
-                  },
-                  {
-                    label: "Chinese",
-                    value: "Chinese"
-                  },
-                  {
-                    label: "Turkish",
-                    value: "Turkish"
-                  },
-                  {
-                    label: "Swedish",
-                    value: "Swedish"
-                  },
-                  {
-                    label: "Russian",
-                    value: "Russian"
-                  },
-                  {
-                    label: "Portuguese",
-                    value: "Portuguese"
-                  },
-                  {
-                    label: "Korean",
-                    value: "Korean"
-                  },
-                  {
-                    label: "Japanese",
-                    value: "Japanese"
-                  },
-                  {
-                    label: "Italian",
-                    value: "Italian"
-                  },
-                  {
-                    label: "Hindi",
-                    value: "Hindi"
-                  },
-                  {
-                    label: "French",
-                    value: "French"
-                  },
-                  {
-                    label: "Finnish",
-                    value: "Finnish"
-                  },
-                  {
-                    label: "Spanish",
-                    value: "Spanish"
-                  },
-                  {
-                    label: "Deutsch",
-                    value: "Deutsch"
-                  }
-                ]}
                 showFilter={true}
-                filterLabel="Language"
+                filterLabel="Genre"
                 URLParams={false}
                 innerClass={{
                   label: "list-item",
                   input: "list-input"
                 }}
               />
-              <hr className="blue" />
-
-              <div className="filter-heading center">
-                <b>
-                  {" "}
-                  <i className="fa fa-calendar" /> Release Date{" "}
-                </b>
-              </div>
+            <hr className="blue" />
+            
+            <div className="filter-heading center">
+              <b>
+                {" "}
+                <i className="fa fa-pied-piper-alt" /> Revenue{" "}
+              </b>
+            </div>
+            
+            <SingleRange 
+              componentId="revenue-list"
+              dataField="ran_revenue"
+              className="revenue-filter"
+              data={[
+                { start: 0, end: 1000, label: "< 1M" },
+                { start: 1000, end: 10000, label: "1M-10M" },
+                { start: 10000, end: 500000, label: "10M-500M" },
+                { start: 500000, end: 1000000, label: "500M-1B" },
+                { start: 1000000, end: 10000000, label: "> 1B" }
+              ]}
+              showRadion={true}
+              showFilter={true}
+              filterLabel="Revenue"
+              URLParams={false}
+              innerClass={{
+                label: "revenue-label",
+                radio: "revenue-radio"
+              }}
+            />
+            <hr className="blue" />
               
-                <DateRange
-                  componentId="date-filter"
-                  dataField="release_date"
-                  className="datePicker"
-                />
-              </div>
+            <div className="filter-heading center">
+              <b>
+                <i className="fa fa-star" /> Ratings
+              </b>
+            </div>
+            <RangeSlider 
+              componentId="RangeSlider"
+              dataField="vote_average"
+              className="review-filter"
+              title="ratings"
+              range={{
+                start: 0,
+                end: 10
+              }}
+              rangeLabels={{
+                start: "0",
+                end: "10"
+              }}
+              react={{
+                and: [
+                  "mainSearch",
+                  "results",
+                  "language-list",
+                  "date-Filter",
+                  "genres-list",
+                  "revenue-list"
+                ]
+              }}
+            />
+            <hr className="blue"/>
+            
+            <div className="filter-heading center">
+              <b>
+                {" "}
+                <i className="fa fa-language" /> Languages{" "}
+              </b>
+            </div>
+            
+            <MultiDataList 
+              componentId="language-list"
+              dataField="original_language.raw"
+              className="language-filter"
+              title="language"
+              size={100}
+              sortBy="asc"
+              queryFormat="or"
+              selectAllLabel="All Languages"
+              showCheckbox={true}
+              showSearch={true}
+              placeholder="Search for a language"
+              react={{
+                and: [
+                  "mainSearch",
+                  "results",
+                  "date-filter",
+                  "RangeSlider",
+                  "genres-list",
+                  "revenue-list"
+                ]
+              }}
+              data={[
+                {
+                  label: "English",
+                  value: "English"
+                },
+                {
+                  label: "Chinese",
+                  value: "Chinese"
+                },
+                {
+                  label: "Turkish",
+                  value: "Turkish"
+                },
+                {
+                  label: "Swedish",
+                  value: "Swedish"
+                },
+                {
+                  label: "Russian",
+                  value: "Russian"
+                },
+                {
+                  label: "Portuguese",
+                  value: "Portuguese"
+                },
+                {
+                  label: "Korean",
+                  value: "Korean"
+                },
+                {
+                  label: "Japanese",
+                  value: "Japanese"
+                },
+                {
+                  label: "Italian",
+                  value: "Italian"
+                },
+                {
+                  label: "Hindi",
+                  value: "Hindi"
+                },
+                {
+                  label: "French",
+                  value: "French"
+                },
+                {
+                  label: "Finnish",
+                  value: "Finnish"
+                },
+                {
+                  label: "Spanish",
+                  value: "Spanish"
+                },
+                {
+                  label: "Deutsch",
+                  value: "Deutsch"
+                }
+              ]}
+              showFilter={true}
+              filterLabel="Language"
+              URLParams={false}
+              innerClass={{
+                label: "list-item",
+                input: "list-input"
+              }}
+            />
+            <hr className="blue" />
+
+            <div className="filter-heading center">
+              <b>
+                {" "}
+                <i className="fa fa-calendar" /> Release Date{" "}
+              </b>
+            </div>
+              
+              <DateRange
+                componentId="date-filter"
+                dataField="release_date"
+                className="datePicker"
+              />
+            </div>
               
               <div className={ this.state.isClicked ? "result-container-optional" : "result-container"}>
                 <SelectedFilters
@@ -345,18 +346,57 @@ class App extends Component {
                     return {
                       description: (
                         <div className="main-description">
-                        
+                          <div className="ih-item square effect6 top_to_bottom">
+                            <a target="#" href={"http://www.imdb.com/title/" + res.imdb_id}>
+                              <div className="img">
+                                <img 
+                                  src={
+                                    "https://image.tmdb.org/t/p/w500" +
+                                    res.poster_path
+                                  }
+                                  alt={res.original_title}
+                                  className="result-image"
+                                />
+                              </div>
+                              <div className="info colored">
+                                <h3 className="overlay-title">
+                                  {res.original_title}
+                                </h3>
+                                <div className="overlay-description">
+                                  {res.tagline}
+                                </div>
+                                
+                                <div className="overlay-info">
+                                  <div className="rating-time-score-container">
+                                    <div className="sub-title Rating-data">
+                                      <b>
+                                        Imdb
+                                        <span className="details">
+                                          {" "}
+                                          {res.vote_average}/10{" "}
+                                        </span>
+                                      </b>
+                                    </div>
+                                    <div className="time-data">
+                                      <b>
+                                      
+                                      </b>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
                         </div>
-                      )
-                    }
+                      ), url: "http://www.imdb.com/title/" + res.imdb_id
+                    };
                   }}
                 />
               </div>
               
-              <button className="toggle-button" onClick={this.handleClick.bind(this)}>
-                {this.state.message}
-              </button>
-            </div>
+            <button className="toggle-button" onClick={this.handleClick.bind(this)}>
+              {this.state.message}
+            </button>
           </div>
         </ReactiveBase>
       </div>
