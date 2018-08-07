@@ -321,6 +321,40 @@ logo-container {
   opacity: 0;
 }
 
+.ih-item.square.effect6 .info h3 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+  padding: 10px;
+  background: #111;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.ih-item.square.effect6 a:hover .img {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.ih-item.square.effect6 a:hover .info {
+  visibility: visible;
+  opacity: 1;
+}
+
+.ih-item.square.effect6.top_to_bottom .info h3 {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.ih-item.square.effect6.top_to_bottom a:hover .info h3 {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
 
 
 /* SCROLLBAR STYLES */
@@ -363,4 +397,13 @@ logo-container {
   border: 1px solid #1f1f1f;
   border-top: 1px solid #666;
   border-left: 1px solid #666;
+}
+
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .toggle-button {
+    display: block;
+  }
+  
 }
